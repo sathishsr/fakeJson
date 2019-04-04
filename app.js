@@ -1,9 +1,16 @@
-import express from "express";
-var port = process.env.PORT || 3000;
+var express = require('express');
 var app = express();
-app.get("/", function(req, res) {
-  res.send(JSON.stringify({ Hello: "World" }));
-});
-app.listen(port, function() {
-  console.log(`Example app listening on port !`);
-});
+var fs = require("fs");
+
+app.get('/listUsers', function (req, res) {
+   fs.readFile( __dirname + "/" + "db.json", 'utf8', function (err, data) {
+      console.log( 'asassas' +data );
+      res.end( data );
+   });
+})
+
+var server = app.listen(8081, function () {
+   var host = server.address().address
+   var port = server.address().port
+   console.log("Example app listening at http://%s:%s", host, port)
+})
