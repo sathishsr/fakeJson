@@ -19,5 +19,9 @@
     "express": "^4.16.4",
     "express-ejs-layouts": "^2.5.0",
     "mongoose": "^5.4.22"
+  },
+  "devDependencies": {
+    "dotenv": "^7.0.0",
+    "nodemon": "^1.18.10"
   }
 }
