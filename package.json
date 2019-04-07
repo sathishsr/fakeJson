@@ -3,13 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {"node":"11.13.0", "npm":"6.7.0"},
+  "engines": {
+    "node": "11.13.0",
+    "npm": "6.7.0"
+  },
   "scripts": {
-    "start":"node index.js"
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "mongoose": "^5.4.22"
+  },
+  "devDependencies": {
+    "dotenv": "^7.0.0",
+    "nodemon": "^1.18.10"
   }
 }
